@@ -8,10 +8,12 @@ pinMode(buzzer, OUTPUT);
 pinMode(flamePin, INPUT);
  Serial.begin(9600);
  }
- 
+
 void loop() 
 {
+    //read data for light sensor    
   Flame = digitalRead(flamePin);
+  
   if (Flame== HIGH)
   { Serial.println("Fire is Detected");
    tone(buzzer, 1000); 
